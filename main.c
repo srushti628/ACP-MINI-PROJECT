@@ -100,3 +100,55 @@ printf("Canvas size: %d x %d\n", WIDTH, HEIGHT);
 printf("Use coordinates x y.\n");
 printf("x range: 0 to %d\n", WIDTH - 1);
 printf("y range: 0 to %d\n", HEIGHT - 1);
+while(1)
+{
+printf("\nMenu\n");
+printf("1. Draw Line\n");
+printf("2. Draw Rectangle\n");
+printf("3. Draw Circle\n");
+printf("4. Draw Triangle\n");
+printf("5. Display Picture\n");
+printf("6. Clear Picture\n");
+printf("7. Modify Picture\n");
+printf("0. Exit\n");
+printf("Enter Choice: ");
+scanf("%d",&choice);
+if(choice==1)
+{
+int x1,y1,x2,y2;
+printf("Enter x1 y1 x2 y2:");
+scanf("%d %d %d %d",&x1,&y1,&x2,&y2);
+drawLine(x1,y1,x2,y2);
+}
+else if(choice==2)
+{
+int x1,y1,x2,y2;
+printf("Enter top-left x y and bottom-right x y:");
+scanf("%d %d %d %d",&x1,&y1,&x2,&y2);
+drawRectangle(x1,y1,x2,y2);
+}
+else if(choice==3)
+{
+int cx,cy,radius;
+printf("Enter center x y and radius:");
+scanf("%d %d %d",&cx,&cy,&radius);
+drawCircle(cx,cy,radius);
+}
+else if(choice==4)
+{
+int x1,y1,x2,y2,x3,y3;
+printf("Enter x1 y1 x2 y2 x3 y3:");
+scanf("%d %d %d %d %d %d",&x1,&y1,&x2,&y2,&x3,&y3);
+drawTriangle(x1,y1,x2,y2,x2,y3);
+}
+else if(choice==5)
+{
+printf("The picture is:\n");
+displayPicture();
+}
+else if(choice==6)
+{
+clearPicture();
+printf("Picture cleared.\n");
+}
+
