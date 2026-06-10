@@ -151,4 +151,26 @@ else if(choice==6)
 clearPicture();
 printf("Picture cleared.\n");
 }
+else if(choice==7)
+{
+int x1,y1,x2,y2;
+clearPicture();
+printf("Enter new line coordinates x1 y1 x2 y2: ");
+scanf("%d %d %d %d",&x1,&y1,&x2,&y2);
+drawLine(x1,y1,x2,y2);
+printf("Picture modified.\n");
+}
+else if(choice==0)
+{
+printf("Exiting program.\n");
+break;
+}
+else
+{
+printf("Invalid choice.\n");
+}
+}
+return 0;
+}
+
 
