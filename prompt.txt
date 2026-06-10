@@ -1,0 +1,3087 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define WIDTH 80
+#define HEIGHT 24
+
+#define EMPTY '_'
+#define PIXEL '*'
+
+char picture[HEIGHT][WIDTH];
+
+void clearPicture() {
+    /*
+        TODO:
+        Fill the entire 2D array picture with EMPTY character '_'.
+    */
+}
+
+void displayPicture() {
+    /*
+        TODO:
+        Print the 2D picture array row by row.
+    */
+}
+
+void setPixel(int x, int y) {
+    /*
+        TODO:
+        If x and y are inside the canvas,
+        set picture[y][x] to PIXEL character '*'.
+    */
+}
+
+void drawLine(int x1, int y1, int x2, int y2) {
+    /*
+        TODO:
+        Draw a line from (x1, y1) to (x2, y2)
+        using the '*' character.
+    */
+}
+
+void drawRectangle(int x1, int y1, int x2, int y2) {
+    /*
+        TODO:
+        Draw a rectangle using four lines.
+        Top-left corner is (x1, y1).
+        Bottom-right corner is (x2, y2).
+    */
+}
+
+void drawCircle(int cx, int cy, int radius) {
+    /*
+        TODO:
+        Draw a circle with center (cx, cy)
+        and given radius using '*'.
+    */
+}
+
+void drawTriangle(int x1, int y1, int x2, int y2, int x3, int y3) {
+    /*
+        TODO:
+        Draw a triangle by joining the three given points.
+    */
+}
+
+int main() {
+    int choice;
+
+    clearPicture();
+
+    printf("2D Graphics Editor\n");
+    printf("Canvas size: %d x %d\n", WIDTH, HEIGHT);
+    printf("Use coordinates x y.\n");
+    printf("x range: 0 to %d\n", WIDTH - 1);
+    printf("y range: 0 to %d\n", HEIGHT - 1);
+
+    while (1) {
+        printf("\nMenu\n");
+        printf("1. Draw Line\n");
+        printf("2. Draw Rectangle\n");
+        printf("3. Draw Circle\n");
+        printf("4. Draw Triangle\n");
+        printf("5. Display Picture\n");
+        printf("0. Exit\n");
+        printf("Enter choice: ");
+
+        scanf("%d", &choice);
+
+        if (choice == 1) {
+            int x1, y1, x2, y2;
+
+            printf("Enter x1 y1 x2 y2: ");
+            scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+
+            drawLine(x1, y1, x2, y2);
+        }
+        else if (choice == 2) {
+            int x1, y1, x2, y2;
+
+            printf("Enter top-left x y and bottom-right x y: ");
+            scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+
+            drawRectangle(x1, y1, x2, y2);
+        }
+        else if (choice == 3) {
+            int cx, cy, radius;
+
+            printf("Enter center x y and radius: ");
+            scanf("%d %d %d", &cx, &cy, &radius);
+
+            drawCircle(cx, cy, radius);
+        }
+        else if (choice == 4) {
+            int x1, y1, x2, y2, x3, y3;
+
+            printf("Enter x1 y1 x2 y2 x3 y3: ");
+            scanf("%d %d %d %d %d %d",
+                  &x1, &y1, &x2, &y2, &x3, &y3);
+
+            drawTriangle(x1, y1, x2, y2, x3, y3);
+        }
+        else if (choice == 5) {
+            printf("The picture is:\n");
+            displayPicture();
+        }
+        else if (choice == 0) {
+            printf("Exiting program.\n");
+            break;
+        }
+        else {
+            printf("Invalid choice.\n");
+        }
+    }
+
+    return 0;
+}
+give full program without change in logic
+Failed tests
+Test 1: 1
+Test 2: 2
+Test 3: 3
+Test 4: 4
+Test 5: 5
+Test 1: 1
+Program output too large (264Kb)
+Incorrect program output
+--- Input ---
+1
+1
+2 2 20 8
+4
+0
+
+--- Program output ---
+2D Graphics Editor
+Canvas size: 80 x 24
+Use coordinates x y.
+x range: 0 to 79
+y range: 0 to 23
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Invalid choice.
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: angle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+Problem Statement: Write a 2d graphics editor using * and  _.
+
+Write functions to draw a circle, rectangle, line, and triangle.
+You should be able to
+      add objects to the picture,
+      delete objects from the picture, and
+       modify objects in the picture.
+Use a 2d array of characters to store the picture.
+Write a function to display the picture.
+
+Additionally, you can use the ncurses package to create menus and draw pictures.
+give full program
+mission view
+  
+main.c  
+}
+
+
+ 
+Proposed grade: 0 / 10
+Comments
+#include <stdio.h>
+#include <stdlib.h>
+
+#define WIDTH 80
+#define HEIGHT 24
+
+#define EMPTY '_'
+#define PIXEL '*'
+
+char picture[HEIGHT][WIDTH];
+
+void clearPicture() {
+    /*
+        TODO:
+        Fill the entire 2D array picture with EMPTY character '_'.
+    */
+}
+
+void displayPicture() {
+    /*
+        TODO:
+        Print the 2D picture array row by row.
+    */
+}
+
+void setPixel(int x, int y) {
+    /*
+        TODO:
+        If x and y are inside the canvas,
+        set picture[y][x] to PIXEL character '*'.
+    */
+}
+
+void drawLine(int x1, int y1, int x2, int y2) {
+    /*
+        TODO:
+        Draw a line from (x1, y1) to (x2, y2)
+        using the '*' character.
+    */
+}
+
+void drawRectangle(int x1, int y1, int x2, int y2) {
+    /*
+        TODO:
+        Draw a rectangle using four lines.
+        Top-left corner is (x1, y1).
+        Bottom-right corner is (x2, y2).
+    */
+}
+
+void drawCircle(int cx, int cy, int radius) {
+    /*
+        TODO:
+        Draw a circle with center (cx, cy)
+        and given radius using '*'.
+    */
+}
+
+void drawTriangle(int x1, int y1, int x2, int y2, int x3, int y3) {
+    /*
+        TODO:
+        Draw a triangle by joining the three given points.
+    */
+}
+
+int main() {
+    int choice;
+
+    clearPicture();
+
+    printf("2D Graphics Editor\n");
+    printf("Canvas size: %d x %d\n", WIDTH, HEIGHT);
+    printf("Use coordinates x y.\n");
+    printf("x range: 0 to %d\n", WIDTH - 1);
+    printf("y range: 0 to %d\n", HEIGHT - 1);
+
+    while (1) {
+        printf("\nMenu\n");
+        printf("1. Draw Line\n");
+        printf("2. Draw Rectangle\n");
+        printf("3. Draw Circle\n");
+        printf("4. Draw Triangle\n");
+        printf("5. Display Picture\n");
+        printf("0. Exit\n");
+        printf("Enter choice: ");
+
+        scanf("%d", &choice);
+
+        if (choice == 1) {
+            int x1, y1, x2, y2;
+
+            printf("Enter x1 y1 x2 y2: ");
+            scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+
+            drawLine(x1, y1, x2, y2);
+        }
+        else if (choice == 2) {
+            int x1, y1, x2, y2;
+
+            printf("Enter top-left x y and bottom-right x y: ");
+            scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+
+            drawRectangle(x1, y1, x2, y2);
+        }
+        else if (choice == 3) {
+            int cx, cy, radius;
+
+            printf("Enter center x y and radius: ");
+            scanf("%d %d %d", &cx, &cy, &radius);
+
+            drawCircle(cx, cy, radius);
+        }
+        else if (choice == 4) {
+            int x1, y1, x2, y2, x3, y3;
+
+            printf("Enter x1 y1 x2 y2 x3 y3: ");
+            scanf("%d %d %d %d %d %d",
+                  &x1, &y1, &x2, &y2, &x3, &y3);
+
+            drawTriangle(x1, y1, x2, y2, x3, y3);
+        }
+        else if (choice == 5) {
+            printf("The picture is:\n");
+            displayPicture();
+        }
+        else if (choice == 0) {
+            printf("Exiting program.\n");
+            break;
+        }
+        else {
+            printf("Invalid choice.\n");
+        }
+    }
+
+    return 0;
+}
+it was showing program output too large and then it was not showing expected output
+Requirements:
+
+Create a repository in GitHub.
+Submit the link to the GitHub repository in Moodle. (In the online text field provided in the assignment)
+Daily push to GitHub is mandatory.
+Evaluation Rubrics:
+
+Total marks: 5
+Copied Caught -  0 marks.
+No submission - 1 mark. 
+Copied  - 2 marks.
+Original partially complete - 3 marks.
+Original almost complete - 4 marks.
+Original Complete - 5 marks.
+Problem Statement: Write a 2d graphics editor using * and  _.
+
+Write functions to draw a circle, rectangle, line, and triangle.
+You should be able to
+      add objects to the picture,
+      delete objects from the picture, and
+       modify objects in the picture.
+Use a 2d array of characters to store the picture.
+Write a function to display the picture.
+
+Additionally, you can use the ncurses package to create menus and draw pictures.
+Submission
+send me exact code
+just do your work give me code
+plssss give me exact code
+#include<stdio.h>
+#include<stdlib.h>
+
+#define WIDTH 80
+#define HEIGHT 24
+
+#define EMPTY '_'
+#define PIXEL '*'
+
+
+char picture[HEIGHT][WIDTH];
+void clearPicture()
+{
+    int i,j;
+    for(i=0;i<HEIGHT;i++)
+        {
+            for(j=0;j<WIDTH;j++)
+                {
+                    picture[i][j]=EMPTY;
+
+}
+        }
+}
+void displayPicture()
+{
+    int i,j;
+for(i=0;i<HEIGHT;i++)
+{
+for(j=0;j<WIDTH;j++)
+{
+printf("%c", picture[i][j]);
+}
+printf("\n");
+}
+}
+void setPixel(int x, int y)
+{
+    if(x>=0 && x<WIDTH && y>=0 && y<HEIGHT)
+{
+picture[y][x]=PIXEL;
+}
+}acccoeding to that program is this half program is correct or not
+give next partvoid drawLine(int x1, int y1, int x2, int y2)
+void drawRectangle(int x1, int y1, int x2, int y2)
+void drawCircle(int cx, int cy, int radius)
+void drawTriangle(int x1, int y1, int x2, int y2, int x3, int y3)
+int main() {
+    int choice;
+
+    clearPicture();
+
+    printf("2D Graphics Editor\n");
+    printf("Canvas size: %d x %d\n", WIDTH, HEIGHT);
+    printf("Use coordinates x y.\n");
+    printf("x range: 0 to %d\n", WIDTH - 1);
+    printf("y range: 0 to %d\n", HEIGHT - 1);
+
+    while (1) {
+        printf("\nMenu\n");
+        printf("1. Draw Line\n");
+        printf("2. Draw Rectangle\n");
+        printf("3. Draw Circle\n");
+        printf("4. Draw Triangle\n");
+        printf("5. Display Picture\n");
+        printf("0. Exit\n");
+        printf("Enter choice: ");
+
+        scanf("%d", &choice);
+
+        if (choice == 1) {
+            int x1, y1, x2, y2;
+
+            printf("Enter x1 y1 x2 y2: ");
+            scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+
+            drawLine(x1, y1, x2, y2);
+        }
+        else if (choice == 2) {
+            int x1, y1, x2, y2;
+
+            printf("Enter top-left x y and bottom-right x y: ");
+            scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+
+            drawRectangle(x1, y1, x2, y2);
+        }
+        else if (choice == 3) {
+            int cx, cy, radius;
+
+            printf("Enter center x y and radius: ");
+            scanf("%d %d %d", &cx, &cy, &radius);
+
+            drawCircle(cx, cy, radius);
+        }
+        else if (choice == 4) {
+            int x1, y1, x2, y2, x3, y3;
+
+            printf("Enter x1 y1 x2 y2 x3 y3: ");
+            scanf("%d %d %d %d %d %d",
+                  &x1, &y1, &x2, &y2, &x3, &y3);
+
+            drawTriangle(x1, y1, x2, y2, x3, y3);
+        }
+        else if (choice == 5) {
+            printf("The picture is:\n");
+            displayPicture();
+        }
+        else if (choice == 0) {
+            printf("Exiting program.\n");
+            break;
+        }
+        else {
+            printf("Invalid choice.\n");
+        }
+    }
+
+    return 0;
+}
+how to run this code in vs code
+gcc : The term 'gcc' is not recognized as the name of a cmdlet, function,
+script file, or operable program. Check the spelling of the name, or if a path
+was included, verify that the path is correct and try again.
+At line:1 char:1
++ gcc --version
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (gcc:String) [], CommandNotFoundE
+   xception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Srushti> 
+in which i can get proper output for that program
+ERROR!
+/tmp/QptWun8SFt/main.c: In function 'drawLine':
+/tmp/QptWun8SFt/main.c:61:4: error: 'XInc' undeclared (first use in this function); did you mean 'xInc'?
+   61 | x+=XInc;
+      |    ^~~~
+      |    xInc
+/tmp/QptWun8SFt/main.c:61:4: note: each undeclared identifier is reported only once for each function it appears in
+ERROR!
+/tmp/QptWun8SFt/main.c: In function 'drawCircle':
+/tmp/QptWun8SFt/main.c:83:10: error: 'cx' undeclared (first use in this function); did you mean 'cX'?
+   83 | setPixel(cx+x,cy+y);
+      |          ^~
+      |          cX
+/tmp/QptWun8SFt/main.c: At top level:
+ERROR!
+/tmp/QptWun8SFt/main.c:162:8: error: expected declaration specifiers or '...' before string constant
+  162 | printf("y range: 0 to %d\n", HEIGHT - 1);
+      |        ^~~~~~~~~~~~~~~~~~~~
+ERROR!
+/tmp/QptWun8SFt/main.c:5:16: error: expected declaration specifiers or '...' before numeric constant
+    5 | #define HEIGHT 24
+      |                ^~
+/tmp/QptWun8SFt/main.c:162:30: note: in expansion of macro 'HEIGHT'
+  162 | printf("y range: 0 to %d\n", HEIGHT - 1);
+      |                              ^~~~~~
+
+
+=== Code Exited With Errors ===
+ERROR!
+/tmp/GnHsgTfqCD/main.c:162:8: error: expected declaration specifiers or '...' before string constant
+  162 | printf("y range: 0 to %d\n", HEIGHT - 1);
+      |        ^~~~~~~~~~~~~~~~~~~~
+/tmp/GnHsgTfqCD/main.c:5:16: error: expected declaration specifiers or '...' before numeric constant
+    5 | #define HEIGHT 24
+      |                ^~
+/tmp/GnHsgTfqCD/main.c:162:30: note: in expansion of macro 'HEIGHT'
+  162 | printf("y range: 0 to %d\n", HEIGHT - 1);
+      |                              ^~~~~~
+
+
+=== Code Exited With Errors
+ERROR!
+/tmp/bXcVv0hXuS/main.c:162:8: error: expected declaration specifiers or '...' before string constant
+  162 | printf("y range: 0 to %d\n", HEIGHT - 1);
+      |        ^~~~~~~~~~~~~~~~~~~~
+ERROR!
+/tmp/bXcVv0hXuS/main.c:5:16: error: expected declaration specifiers or '...' before numeric constant
+    5 | #define HEIGHT 24
+      |                ^~
+/tmp/bXcVv0hXuS/main.c:162:30: note: in expansion of macro 'HEIGHT'
+  162 | printf("y range: 0 to %d\n", HEIGHT - 1);
+      |                              ^~~~~~
+
+
+=== Code Exited With Errors ===
+#include<stdio.h>
+#include<stdlib.h>
+
+#define WIDTH 80
+#define HEIGHT 24
+
+#define EMPTY '_'
+#define PIXEL '*'
+
+
+char picture[HEIGHT][WIDTH];
+void clearPicture()
+{
+    int i,j;
+    for(i=0;i<HEIGHT;i++)
+        {
+            for(j=0;j<WIDTH;j++)
+                {
+                    picture[i][j]=EMPTY;
+
+}
+        }
+}
+void displayPicture()
+{
+    int i,j;
+for(i=0;i<HEIGHT;i++)
+{
+for(j=0;j<WIDTH;j++)
+{
+printf("%c", picture[i][j]);
+}
+printf("\n");
+}
+}
+void setPixel(int x, int y)
+{
+    if(x>=0 && x<WIDTH && y>=0 && y<HEIGHT)
+{
+picture[y][x]=PIXEL;
+}
+}
+void drawLine(int x1,int y1,int x2,int y2)
+{
+int dx=abs(x2-x1);
+int dy=abs(y2-y1);
+int steps=(dx>dy)?dx:dy;
+if(steps==0)
+{
+setPixel(x1,y1);
+return;
+}
+float xInc=(float)(x2-x1)/steps;
+float yInc=(float)(y2-y1)/steps;
+float x=x1;
+float y=y1;
+int i;
+for(int i=0;i<=steps;i++)
+{
+setPixel((int)(x+0.5), (int)(y+0.5));
+x+=xInc;
+y+=yInc;
+}
+}
+void drawRectangle(int x1,int y1,int x2,int y2)
+{
+    drawLine(x1, y1, x2, y1);
+drawLine(x2, y1, x2, y2);
+drawLine(x2, y2, x1, y2);
+drawLine(x1, y2, x1, y1);
+}
+void drawCircle(int cX, int cy, int radius)
+{
+    int x,y;
+for(x=-radius;x<=radius;x++)
+{
+for(y=-radius;y<=radius;y++)
+{
+int d=x*x+y*y;
+int r=radius*radius;
+if(d>=r - radius && d<=r+radius)
+{
+setPixel(cX + x,cy + y);
+}
+}
+}
+}
+void drawTriangle(int x1, int y1, int x2, int y2, int x3, int y3)
+{
+    drawLine(x1, y1, x2, y2);
+drawLine(x2, y2, x3, y3);
+drawLine(x3, y3, x1, y1);
+}
+int main()
+{
+    int choice;
+clearPicture();
+printf("2D Graphics Editor\n");
+printf("Canvas size: %d x %d\n", WIDTH, HEIGHT);
+printf("Use coordinates x y.\n");
+printf("x range: 0 to %d\n", WIDTH - 1);
+while (1) {
+        printf("\nMenu\n");
+        printf("1. Draw Line\n");
+        printf("2. Draw Rectangle\n");
+        printf("3. Draw Circle\n");
+        printf("4. Draw Triangle\n");
+        printf("5. Display Picture\n");
+        printf("0. Exit\n");
+        printf("Enter choice: ");
+
+        scanf("%d", &choice);
+
+        if (choice == 1) {
+            int x1, y1, x2, y2;
+
+            printf("Enter x1 y1 x2 y2: ");
+            scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+
+            drawLine(x1, y1, x2, y2);
+        }
+        else if (choice == 2) {
+            int x1, y1, x2, y2;
+
+            printf("Enter top-left x y and bottom-right x y: ");
+            scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+
+            drawRectangle(x1, y1, x2, y2);
+        }
+        else if (choice == 3) {
+            int cx, cy, radius;
+
+            printf("Enter center x y and radius: ");
+            scanf("%d %d %d", &cx, &cy, &radius);
+
+            drawCircle(cx, cy, radius);
+        }
+        else if (choice == 4) {
+            int x1, y1, x2, y2, x3, y3;
+
+            printf("Enter x1 y1 x2 y2 x3 y3: ");
+            scanf("%d %d %d %d %d %d",
+                  &x1, &y1, &x2, &y2, &x3, &y3);
+
+            drawTriangle(x1, y1, x2, y2, x3, y3);
+        }
+        else if (choice == 5) {
+            printf("The picture is:\n");
+            displayPicture();
+        }
+        else if (choice == 0) {
+            printf("Exiting program.\n");
+            break;
+        }
+        else {
+            printf("Invalid choice.\n");
+        }
+    }
+
+    return 0;
+}
+printf("y range: 0 to %d\n", HEIGHT - 1);
+2D Graphics Editor
+Canvas size: 80 x 24
+Use coordinates x y.
+x range: 0 to 79
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: 4
+Enter x1 y1 x2 y2 x3 y3: 2
+3 4 5 1 2
+
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: 1
+Enter x1 y1 x2 y2: 1 2 3 4
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: 3
+Enter center x y and radius: 3 4 5
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: 5
+The picture is:
+**___**_________________________________________________________________________
+_______*________________________________________________________________________
+_*_____**_______________________________________________________________________
+__*_____*_______________________________________________________________________
+___*____*_______________________________________________________________________
+____*___*_______________________________________________________________________
+_______**_______________________________________________________________________
+_______*________________________________________________________________________
+**___**_________________________________________________________________________
+_*****__________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: 
+give me again correct program
+give me which line of code should be corrected
+#include<stdio.h>
+#include<stdlib.h>
+
+#define WIDTH 80
+#define HEIGHT 24
+
+#define EMPTY '_'
+#define PIXEL '*'
+
+
+char picture[HEIGHT][WIDTH];
+void clearPicture()
+{
+    int i,j;
+    for(i=0;i<HEIGHT;i++)
+        {
+            for(j=0;j<WIDTH;j++)
+                {
+                    picture[i][j]=EMPTY;
+
+}
+        }
+}
+void displayPicture()
+{
+    int i,j;
+for(i=0;i<HEIGHT;i++)
+{
+for(j=0;j<WIDTH;j++)
+{
+printf("%c", picture[i][j]);
+}
+printf("\n");
+}
+}
+void setPixel(int x, int y)
+{
+    if(x>=0 && x<WIDTH && y>=0 && y<HEIGHT)
+{
+picture[y][x]=PIXEL;
+}
+}
+void drawLine(int x1,int y1,int x2,int y2)
+{
+int dx=abs(x2-x1);
+int dy=abs(y2-y1);
+int steps=(dx>dy)?dx:dy;
+if(steps==0)
+{
+setPixel(x1,y1);
+return;
+}
+float xInc=(float)(x2-x1)/steps;
+float yInc=(float)(y2-y1)/steps;
+float x=x1;
+float y=y1;
+int i;
+for(int i=0;i<=steps;i++)
+{
+setPixel((int)(x+0.5), (int)(y+0.5));
+x+=xInc;
+y+=yInc;
+}
+}
+void drawRectangle(int x1,int y1,int x2,int y2)
+{
+    drawLine(x1, y1, x2, y1);
+drawLine(x2, y1, x2, y2);
+drawLine(x2, y2, x1, y2);
+drawLine(x1, y2, x1, y1);
+}
+void drawCircle(int cX, int cy, int radius)
+{
+    int x,y;
+for(x=-radius;x<=radius;x++)
+{
+for(y=-radius;y<=radius;y++)
+{
+int d=x*x+y*y;
+int r=radius*radius;
+if(d>=r - radius && d<=r+radius)
+{
+setPixel(cX + x,cy + y);
+}
+}
+}
+}
+void drawTriangle(int x1, int y1, int x2, int y2, int x3, int y3)
+{
+    drawLine(x1, y1, x2, y2);
+drawLine(x2, y2, x3, y3);
+drawLine(x3, y3, x1, y1);
+}
+int main()
+{
+    int choice;
+clearPicture();
+printf("2D Graphics Editor\n");
+printf("Canvas size: %d x %d\n", WIDTH, HEIGHT);
+printf("Use coordinates x y.\n");
+printf("x range: 0 to %d\n", WIDTH - 1);
+while (1) {
+        printf("\nMenu\n");
+        printf("1. Draw Line\n");
+        printf("2. Draw Rectangle\n");
+        printf("3. Draw Circle\n");
+        printf("4. Draw Triangle\n");
+        printf("5. Display Picture\n");
+        printf("0. Exit\n");
+        printf("Enter choice: ");
+
+        scanf("%d", &choice);
+
+        if (choice == 1) {
+            int x1, y1, x2, y2;
+
+            printf("Enter x1 y1 x2 y2: ");
+            scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+
+            drawLine(x1, y1, x2, y2);
+        }
+        else if (choice == 2) {
+            int x1, y1, x2, y2;
+
+            printf("Enter top-left x y and bottom-right x y: ");
+            scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+
+            drawRectangle(x1, y1, x2, y2);
+        }
+        else if (choice == 3) {
+            int cx, cy, radius;
+
+            printf("Enter center x y and radius: ");
+            scanf("%d %d %d", &cx, &cy, &radius);
+
+            drawCircle(cx, cy, radius);
+        }
+        else if (choice == 4) {
+            int x1, y1, x2, y2, x3, y3;
+
+            printf("Enter x1 y1 x2 y2 x3 y3: ");
+            scanf("%d %d %d %d %d %d",
+                  &x1, &y1, &x2, &y2, &x3, &y3);
+
+            drawTriangle(x1, y1, x2, y2, x3, y3);
+        }
+        else if (choice == 5) {
+            printf("The picture is:\n");
+            displayPicture();
+        }
+        else if (choice == 0) {
+            printf("Exiting program.\n");
+            break;
+        }
+        else {
+            printf("Invalid choice.\n");
+        }
+    }
+
+    return 0;
+}
+2D Graphics Editor
+Canvas size: 80 x 24
+Use coordinates x y.
+x range: 0 to 79
+y range: 0 to 23
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: 1
+Enter x1 y1 x2 y2: 1 2 3 4
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: 2
+Enter top-left x y and bottom-right x y: 1 2
+3 6
+
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: 3
+Enter center x y and radius: 4 5 8
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: 4
+Enter x1 y1 x2 y2 x3 y3: 3 4 5 6 1 5
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: 5
+The picture is:
+__________*_____________________________________________________________________
+___________*____________________________________________________________________
+_***_______*____________________________________________________________________
+_***________*___________________________________________________________________
+_*_*________*___________________________________________________________________
+_****_______*___________________________________________________________________
+_*****______*___________________________________________________________________
+____________*___________________________________________________________________
+___________*____________________________________________________________________
+___________*____________________________________________________________________
+__________*_____________________________________________________________________
+_________**_____________________________________________________________________
+**_____**_______________________________________________________________________
+__*****_________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: 
+to delete and modify objects what should be added give me program
+give correct program
+#include <stdio.h>
+#include <stdlib.h>
+
+#define WIDTH 80
+#define HEIGHT 24
+
+#define EMPTY '_'
+#define PIXEL '*'
+
+char picture[HEIGHT][WIDTH];
+
+void clearPicture() {
+    /*
+        TODO:
+        Fill the entire 2D array picture with EMPTY character '_'.
+    */
+}
+
+void displayPicture() {
+    /*
+        TODO:
+        Print the 2D picture array row by row.
+    */
+}
+
+void setPixel(int x, int y) {
+    /*
+        TODO:
+        If x and y are inside the canvas,
+        set picture[y][x] to PIXEL character '*'.
+    */
+}
+
+void drawLine(int x1, int y1, int x2, int y2) {
+    /*
+        TODO:
+        Draw a line from (x1, y1) to (x2, y2)
+        using the '*' character.
+    */
+}
+
+void drawRectangle(int x1, int y1, int x2, int y2) {
+    /*
+        TODO:
+        Draw a rectangle using four lines.
+        Top-left corner is (x1, y1).
+        Bottom-right corner is (x2, y2).
+    */
+}
+
+void drawCircle(int cx, int cy, int radius) {
+    /*
+        TODO:
+        Draw a circle with center (cx, cy)
+        and given radius using '*'.
+    */
+}
+
+void drawTriangle(int x1, int y1, int x2, int y2, int x3, int y3) {
+    /*
+        TODO:
+        Draw a triangle by joining the three given points.
+    */
+}
+
+int main() {
+    int choice;
+
+    clearPicture();
+
+    printf("2D Graphics Editor\n");
+    printf("Canvas size: %d x %d\n", WIDTH, HEIGHT);
+    printf("Use coordinates x y.\n");
+    printf("x range: 0 to %d\n", WIDTH - 1);
+    printf("y range: 0 to %d\n", HEIGHT - 1);
+
+    while (1) {
+        printf("\nMenu\n");
+        printf("1. Draw Line\n");
+        printf("2. Draw Rectangle\n");
+        printf("3. Draw Circle\n");
+        printf("4. Draw Triangle\n");
+        printf("5. Display Picture\n");
+        printf("0. Exit\n");
+        printf("Enter choice: ");
+
+        scanf("%d", &choice);
+
+        if (choice == 1) {
+            int x1, y1, x2, y2;
+
+            printf("Enter x1 y1 x2 y2: ");
+            scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+
+            drawLine(x1, y1, x2, y2);
+        }
+        else if (choice == 2) {
+            int x1, y1, x2, y2;
+
+            printf("Enter top-left x y and bottom-right x y: ");
+            scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+
+            drawRectangle(x1, y1, x2, y2);
+        }
+        else if (choice == 3) {
+            int cx, cy, radius;
+
+            printf("Enter center x y and radius: ");
+            scanf("%d %d %d", &cx, &cy, &radius);
+
+            drawCircle(cx, cy, radius);
+        }
+        else if (choice == 4) {
+            int x1, y1, x2, y2, x3, y3;
+
+            printf("Enter x1 y1 x2 y2 x3 y3: ");
+            scanf("%d %d %d %d %d %d",
+                  &x1, &y1, &x2, &y2, &x3, &y3);
+
+            drawTriangle(x1, y1, x2, y2, x3, y3);
+        }
+        else if (choice == 5) {
+            printf("The picture is:\n");
+            displayPicture();
+        }
+        else if (choice == 0) {
+            printf("Exiting program.\n");
+            break;
+        }
+        else {
+            printf("Invalid choice.\n");
+        }
+    }
+
+    return 0;
+}
+according to that progarm give  me code to delete and modify shapes
+in which line we should add
+/tmp/qjme9Qgbuy/main.c: In function 'main':
+ERROR!
+/tmp/qjme9Qgbuy/main.c:159:5: error: expected '}' before 'else'
+  159 |     else if (choice == 7) {
+      |     ^~~~
+
+
+=== Code Exited With Errors ===
+#include <stdio.h>
+#include <stdlib.h>
+
+#define WIDTH 80
+#define HEIGHT 24
+
+#define EMPTY '_'
+#define PIXEL '*'
+
+char picture[HEIGHT][WIDTH];
+
+void clearPicture() {
+    /*
+        TODO:
+        Fill the entire 2D array picture with EMPTY character '_'.
+    */
+}
+
+void displayPicture() {
+    /*
+        TODO:
+        Print the 2D picture array row by row.
+    */
+}
+
+void setPixel(int x, int y) {
+    /*
+        TODO:
+        If x and y are inside the canvas,
+        set picture[y][x] to PIXEL character '*'.
+    */
+}
+
+void drawLine(int x1, int y1, int x2, int y2) {
+    /*
+        TODO:
+        Draw a line from (x1, y1) to (x2, y2)
+        using the '*' character.
+    */
+}
+
+void drawRectangle(int x1, int y1, int x2, int y2) {
+    /*
+        TODO:
+        Draw a rectangle using four lines.
+        Top-left corner is (x1, y1).
+        Bottom-right corner is (x2, y2).
+    */
+}
+
+void drawCircle(int cx, int cy, int radius) {
+    /*
+        TODO:
+        Draw a circle with center (cx, cy)
+        and given radius using '*'.
+    */
+}
+
+void drawTriangle(int x1, int y1, int x2, int y2, int x3, int y3) {
+    /*
+        TODO:
+        Draw a triangle by joining the three given points.
+    */
+}
+
+int main() {
+    int choice;
+
+    clearPicture();
+
+    printf("2D Graphics Editor\n");
+    printf("Canvas size: %d x %d\n", WIDTH, HEIGHT);
+    printf("Use coordinates x y.\n");
+    printf("x range: 0 to %d\n", WIDTH - 1);
+    printf("y range: 0 to %d\n", HEIGHT - 1);
+
+    while (1) {
+        printf("\nMenu\n");
+        printf("1. Draw Line\n");
+        printf("2. Draw Rectangle\n");
+        printf("3. Draw Circle\n");
+        printf("4. Draw Triangle\n");
+        printf("5. Display Picture\n");
+        printf("0. Exit\n");
+        printf("Enter choice: ");
+
+        scanf("%d", &choice);
+
+        if (choice == 1) {
+            int x1, y1, x2, y2;
+
+            printf("Enter x1 y1 x2 y2: ");
+            scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+
+            drawLine(x1, y1, x2, y2);
+        }
+        else if (choice == 2) {
+            int x1, y1, x2, y2;
+
+            printf("Enter top-left x y and bottom-right x y: ");
+            scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+
+            drawRectangle(x1, y1, x2, y2);
+        }
+        else if (choice == 3) {
+            int cx, cy, radius;
+
+            printf("Enter center x y and radius: ");
+            scanf("%d %d %d", &cx, &cy, &radius);
+
+            drawCircle(cx, cy, radius);
+        }
+        else if (choice == 4) {
+            int x1, y1, x2, y2, x3, y3;
+
+            printf("Enter x1 y1 x2 y2 x3 y3: ");
+            scanf("%d %d %d %d %d %d",
+                  &x1, &y1, &x2, &y2, &x3, &y3);
+
+            drawTriangle(x1, y1, x2, y2, x3, y3);
+        }
+        else if (choice == 5) {
+            printf("The picture is:\n");
+            displayPicture();
+        }
+        else if (choice == 0) {
+            printf("Exiting program.\n");
+            break;
+        }
+        else {
+            printf("Invalid choice.\n");
+        }
+    }
+
+    return 0;
+}
+give full program without change in logic
+Failed tests
+Test 1: 1
+Test 2: 2
+Test 3: 3
+Test 4: 4
+Test 5: 5
+Test 1: 1
+Program output too large (264Kb)
+Incorrect program output
+--- Input ---
+1
+1
+2 2 20 8
+4
+0
+
+--- Program output ---
+2D Graphics Editor
+Canvas size: 80 x 24
+Use coordinates x y.
+x range: 0 to 79
+y range: 0 to 23
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Invalid choice.
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: angle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: Enter x1 y1 x2 y2 x3 y3: 
+Menu
+1. Draw Line
+Problem Statement: Write a 2d graphics editor using * and  _.
+
+Write functions to draw a circle, rectangle, line, and triangle.
+You should be able to
+      add objects to the picture,
+      delete objects from the picture, and
+       modify objects in the picture.
+Use a 2d array of characters to store the picture.
+Write a function to display the picture.
+
+Additionally, you can use the ncurses package to create menus and draw pictures.
+give full program
+mission view
+  
+main.c  
+}
+
+
+ 
+Proposed grade: 0 / 10
+Comments
+#include <stdio.h>
+#include <stdlib.h>
+
+#define WIDTH 80
+#define HEIGHT 24
+
+#define EMPTY '_'
+#define PIXEL '*'
+
+char picture[HEIGHT][WIDTH];
+
+void clearPicture() {
+    /*
+        TODO:
+        Fill the entire 2D array picture with EMPTY character '_'.
+    */
+}
+
+void displayPicture() {
+    /*
+        TODO:
+        Print the 2D picture array row by row.
+    */
+}
+
+void setPixel(int x, int y) {
+    /*
+        TODO:
+        If x and y are inside the canvas,
+        set picture[y][x] to PIXEL character '*'.
+    */
+}
+
+void drawLine(int x1, int y1, int x2, int y2) {
+    /*
+        TODO:
+        Draw a line from (x1, y1) to (x2, y2)
+        using the '*' character.
+    */
+}
+
+void drawRectangle(int x1, int y1, int x2, int y2) {
+    /*
+        TODO:
+        Draw a rectangle using four lines.
+        Top-left corner is (x1, y1).
+        Bottom-right corner is (x2, y2).
+    */
+}
+
+void drawCircle(int cx, int cy, int radius) {
+    /*
+        TODO:
+        Draw a circle with center (cx, cy)
+        and given radius using '*'.
+    */
+}
+
+void drawTriangle(int x1, int y1, int x2, int y2, int x3, int y3) {
+    /*
+        TODO:
+        Draw a triangle by joining the three given points.
+    */
+}
+
+int main() {
+    int choice;
+
+    clearPicture();
+
+    printf("2D Graphics Editor\n");
+    printf("Canvas size: %d x %d\n", WIDTH, HEIGHT);
+    printf("Use coordinates x y.\n");
+    printf("x range: 0 to %d\n", WIDTH - 1);
+    printf("y range: 0 to %d\n", HEIGHT - 1);
+
+    while (1) {
+        printf("\nMenu\n");
+        printf("1. Draw Line\n");
+        printf("2. Draw Rectangle\n");
+        printf("3. Draw Circle\n");
+        printf("4. Draw Triangle\n");
+        printf("5. Display Picture\n");
+        printf("0. Exit\n");
+        printf("Enter choice: ");
+
+        scanf("%d", &choice);
+
+        if (choice == 1) {
+            int x1, y1, x2, y2;
+
+            printf("Enter x1 y1 x2 y2: ");
+            scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+
+            drawLine(x1, y1, x2, y2);
+        }
+        else if (choice == 2) {
+            int x1, y1, x2, y2;
+
+            printf("Enter top-left x y and bottom-right x y: ");
+            scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+
+            drawRectangle(x1, y1, x2, y2);
+        }
+        else if (choice == 3) {
+            int cx, cy, radius;
+
+            printf("Enter center x y and radius: ");
+            scanf("%d %d %d", &cx, &cy, &radius);
+
+            drawCircle(cx, cy, radius);
+        }
+        else if (choice == 4) {
+            int x1, y1, x2, y2, x3, y3;
+
+            printf("Enter x1 y1 x2 y2 x3 y3: ");
+            scanf("%d %d %d %d %d %d",
+                  &x1, &y1, &x2, &y2, &x3, &y3);
+
+            drawTriangle(x1, y1, x2, y2, x3, y3);
+        }
+        else if (choice == 5) {
+            printf("The picture is:\n");
+            displayPicture();
+        }
+        else if (choice == 0) {
+            printf("Exiting program.\n");
+            break;
+        }
+        else {
+            printf("Invalid choice.\n");
+        }
+    }
+
+    return 0;
+}
+it was showing program output too large and then it was not showing expected output
+Requirements:
+
+Create a repository in GitHub.
+Submit the link to the GitHub repository in Moodle. (In the online text field provided in the assignment)
+Daily push to GitHub is mandatory.
+Evaluation Rubrics:
+
+Total marks: 5
+Copied Caught -  0 marks.
+No submission - 1 mark. 
+Copied  - 2 marks.
+Original partially complete - 3 marks.
+Original almost complete - 4 marks.
+Original Complete - 5 marks.
+Problem Statement: Write a 2d graphics editor using * and  _.
+
+Write functions to draw a circle, rectangle, line, and triangle.
+You should be able to
+      add objects to the picture,
+      delete objects from the picture, and
+       modify objects in the picture.
+Use a 2d array of characters to store the picture.
+Write a function to display the picture.
+
+Additionally, you can use the ncurses package to create menus and draw pictures.
+Submission
+send me exact code
+just do your work give me code
+plssss give me exact code
+#include<stdio.h>
+#include<stdlib.h>
+
+#define WIDTH 80
+#define HEIGHT 24
+
+#define EMPTY '_'
+#define PIXEL '*'
+
+
+char picture[HEIGHT][WIDTH];
+void clearPicture()
+{
+    int i,j;
+    for(i=0;i<HEIGHT;i++)
+        {
+            for(j=0;j<WIDTH;j++)
+                {
+                    picture[i][j]=EMPTY;
+
+}
+        }
+}
+void displayPicture()
+{
+    int i,j;
+for(i=0;i<HEIGHT;i++)
+{
+for(j=0;j<WIDTH;j++)
+{
+printf("%c", picture[i][j]);
+}
+printf("\n");
+}
+}
+void setPixel(int x, int y)
+{
+    if(x>=0 && x<WIDTH && y>=0 && y<HEIGHT)
+{
+picture[y][x]=PIXEL;
+}
+}acccoeding to that program is this half program is correct or not
+give next partvoid drawLine(int x1, int y1, int x2, int y2)
+void drawRectangle(int x1, int y1, int x2, int y2)
+void drawCircle(int cx, int cy, int radius)
+void drawTriangle(int x1, int y1, int x2, int y2, int x3, int y3)
+int main() {
+    int choice;
+
+    clearPicture();
+
+    printf("2D Graphics Editor\n");
+    printf("Canvas size: %d x %d\n", WIDTH, HEIGHT);
+    printf("Use coordinates x y.\n");
+    printf("x range: 0 to %d\n", WIDTH - 1);
+    printf("y range: 0 to %d\n", HEIGHT - 1);
+
+    while (1) {
+        printf("\nMenu\n");
+        printf("1. Draw Line\n");
+        printf("2. Draw Rectangle\n");
+        printf("3. Draw Circle\n");
+        printf("4. Draw Triangle\n");
+        printf("5. Display Picture\n");
+        printf("0. Exit\n");
+        printf("Enter choice: ");
+
+        scanf("%d", &choice);
+
+        if (choice == 1) {
+            int x1, y1, x2, y2;
+
+            printf("Enter x1 y1 x2 y2: ");
+            scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+
+            drawLine(x1, y1, x2, y2);
+        }
+        else if (choice == 2) {
+            int x1, y1, x2, y2;
+
+            printf("Enter top-left x y and bottom-right x y: ");
+            scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+
+            drawRectangle(x1, y1, x2, y2);
+        }
+        else if (choice == 3) {
+            int cx, cy, radius;
+
+            printf("Enter center x y and radius: ");
+            scanf("%d %d %d", &cx, &cy, &radius);
+
+            drawCircle(cx, cy, radius);
+        }
+        else if (choice == 4) {
+            int x1, y1, x2, y2, x3, y3;
+
+            printf("Enter x1 y1 x2 y2 x3 y3: ");
+            scanf("%d %d %d %d %d %d",
+                  &x1, &y1, &x2, &y2, &x3, &y3);
+
+            drawTriangle(x1, y1, x2, y2, x3, y3);
+        }
+        else if (choice == 5) {
+            printf("The picture is:\n");
+            displayPicture();
+        }
+        else if (choice == 0) {
+            printf("Exiting program.\n");
+            break;
+        }
+        else {
+            printf("Invalid choice.\n");
+        }
+    }
+
+    return 0;
+}
+how to run this code in vs code
+gcc : The term 'gcc' is not recognized as the name of a cmdlet, function,
+script file, or operable program. Check the spelling of the name, or if a path
+was included, verify that the path is correct and try again.
+At line:1 char:1
++ gcc --version
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (gcc:String) [], CommandNotFoundE
+   xception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Srushti> 
+in which i can get proper output for that program
+ERROR!
+/tmp/QptWun8SFt/main.c: In function 'drawLine':
+/tmp/QptWun8SFt/main.c:61:4: error: 'XInc' undeclared (first use in this function); did you mean 'xInc'?
+   61 | x+=XInc;
+      |    ^~~~
+      |    xInc
+/tmp/QptWun8SFt/main.c:61:4: note: each undeclared identifier is reported only once for each function it appears in
+ERROR!
+/tmp/QptWun8SFt/main.c: In function 'drawCircle':
+/tmp/QptWun8SFt/main.c:83:10: error: 'cx' undeclared (first use in this function); did you mean 'cX'?
+   83 | setPixel(cx+x,cy+y);
+      |          ^~
+      |          cX
+/tmp/QptWun8SFt/main.c: At top level:
+ERROR!
+/tmp/QptWun8SFt/main.c:162:8: error: expected declaration specifiers or '...' before string constant
+  162 | printf("y range: 0 to %d\n", HEIGHT - 1);
+      |        ^~~~~~~~~~~~~~~~~~~~
+ERROR!
+/tmp/QptWun8SFt/main.c:5:16: error: expected declaration specifiers or '...' before numeric constant
+    5 | #define HEIGHT 24
+      |                ^~
+/tmp/QptWun8SFt/main.c:162:30: note: in expansion of macro 'HEIGHT'
+  162 | printf("y range: 0 to %d\n", HEIGHT - 1);
+      |                              ^~~~~~
+
+
+=== Code Exited With Errors ===
+ERROR!
+/tmp/GnHsgTfqCD/main.c:162:8: error: expected declaration specifiers or '...' before string constant
+  162 | printf("y range: 0 to %d\n", HEIGHT - 1);
+      |        ^~~~~~~~~~~~~~~~~~~~
+/tmp/GnHsgTfqCD/main.c:5:16: error: expected declaration specifiers or '...' before numeric constant
+    5 | #define HEIGHT 24
+      |                ^~
+/tmp/GnHsgTfqCD/main.c:162:30: note: in expansion of macro 'HEIGHT'
+  162 | printf("y range: 0 to %d\n", HEIGHT - 1);
+      |                              ^~~~~~
+
+
+=== Code Exited With Errors
+ERROR!
+/tmp/bXcVv0hXuS/main.c:162:8: error: expected declaration specifiers or '...' before string constant
+  162 | printf("y range: 0 to %d\n", HEIGHT - 1);
+      |        ^~~~~~~~~~~~~~~~~~~~
+ERROR!
+/tmp/bXcVv0hXuS/main.c:5:16: error: expected declaration specifiers or '...' before numeric constant
+    5 | #define HEIGHT 24
+      |                ^~
+/tmp/bXcVv0hXuS/main.c:162:30: note: in expansion of macro 'HEIGHT'
+  162 | printf("y range: 0 to %d\n", HEIGHT - 1);
+      |                              ^~~~~~
+
+
+=== Code Exited With Errors ===
+#include<stdio.h>
+#include<stdlib.h>
+
+#define WIDTH 80
+#define HEIGHT 24
+
+#define EMPTY '_'
+#define PIXEL '*'
+
+
+char picture[HEIGHT][WIDTH];
+void clearPicture()
+{
+    int i,j;
+    for(i=0;i<HEIGHT;i++)
+        {
+            for(j=0;j<WIDTH;j++)
+                {
+                    picture[i][j]=EMPTY;
+
+}
+        }
+}
+void displayPicture()
+{
+    int i,j;
+for(i=0;i<HEIGHT;i++)
+{
+for(j=0;j<WIDTH;j++)
+{
+printf("%c", picture[i][j]);
+}
+printf("\n");
+}
+}
+void setPixel(int x, int y)
+{
+    if(x>=0 && x<WIDTH && y>=0 && y<HEIGHT)
+{
+picture[y][x]=PIXEL;
+}
+}
+void drawLine(int x1,int y1,int x2,int y2)
+{
+int dx=abs(x2-x1);
+int dy=abs(y2-y1);
+int steps=(dx>dy)?dx:dy;
+if(steps==0)
+{
+setPixel(x1,y1);
+return;
+}
+float xInc=(float)(x2-x1)/steps;
+float yInc=(float)(y2-y1)/steps;
+float x=x1;
+float y=y1;
+int i;
+for(int i=0;i<=steps;i++)
+{
+setPixel((int)(x+0.5), (int)(y+0.5));
+x+=xInc;
+y+=yInc;
+}
+}
+void drawRectangle(int x1,int y1,int x2,int y2)
+{
+    drawLine(x1, y1, x2, y1);
+drawLine(x2, y1, x2, y2);
+drawLine(x2, y2, x1, y2);
+drawLine(x1, y2, x1, y1);
+}
+void drawCircle(int cX, int cy, int radius)
+{
+    int x,y;
+for(x=-radius;x<=radius;x++)
+{
+for(y=-radius;y<=radius;y++)
+{
+int d=x*x+y*y;
+int r=radius*radius;
+if(d>=r - radius && d<=r+radius)
+{
+setPixel(cX + x,cy + y);
+}
+}
+}
+}
+void drawTriangle(int x1, int y1, int x2, int y2, int x3, int y3)
+{
+    drawLine(x1, y1, x2, y2);
+drawLine(x2, y2, x3, y3);
+drawLine(x3, y3, x1, y1);
+}
+int main()
+{
+    int choice;
+clearPicture();
+printf("2D Graphics Editor\n");
+printf("Canvas size: %d x %d\n", WIDTH, HEIGHT);
+printf("Use coordinates x y.\n");
+printf("x range: 0 to %d\n", WIDTH - 1);
+while (1) {
+        printf("\nMenu\n");
+        printf("1. Draw Line\n");
+        printf("2. Draw Rectangle\n");
+        printf("3. Draw Circle\n");
+        printf("4. Draw Triangle\n");
+        printf("5. Display Picture\n");
+        printf("0. Exit\n");
+        printf("Enter choice: ");
+
+        scanf("%d", &choice);
+
+        if (choice == 1) {
+            int x1, y1, x2, y2;
+
+            printf("Enter x1 y1 x2 y2: ");
+            scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+
+            drawLine(x1, y1, x2, y2);
+        }
+        else if (choice == 2) {
+            int x1, y1, x2, y2;
+
+            printf("Enter top-left x y and bottom-right x y: ");
+            scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+
+            drawRectangle(x1, y1, x2, y2);
+        }
+        else if (choice == 3) {
+            int cx, cy, radius;
+
+            printf("Enter center x y and radius: ");
+            scanf("%d %d %d", &cx, &cy, &radius);
+
+            drawCircle(cx, cy, radius);
+        }
+        else if (choice == 4) {
+            int x1, y1, x2, y2, x3, y3;
+
+            printf("Enter x1 y1 x2 y2 x3 y3: ");
+            scanf("%d %d %d %d %d %d",
+                  &x1, &y1, &x2, &y2, &x3, &y3);
+
+            drawTriangle(x1, y1, x2, y2, x3, y3);
+        }
+        else if (choice == 5) {
+            printf("The picture is:\n");
+            displayPicture();
+        }
+        else if (choice == 0) {
+            printf("Exiting program.\n");
+            break;
+        }
+        else {
+            printf("Invalid choice.\n");
+        }
+    }
+
+    return 0;
+}
+printf("y range: 0 to %d\n", HEIGHT - 1);
+2D Graphics Editor
+Canvas size: 80 x 24
+Use coordinates x y.
+x range: 0 to 79
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: 4
+Enter x1 y1 x2 y2 x3 y3: 2
+3 4 5 1 2
+
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: 1
+Enter x1 y1 x2 y2: 1 2 3 4
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: 3
+Enter center x y and radius: 3 4 5
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: 5
+The picture is:
+**___**_________________________________________________________________________
+_______*________________________________________________________________________
+_*_____**_______________________________________________________________________
+__*_____*_______________________________________________________________________
+___*____*_______________________________________________________________________
+____*___*_______________________________________________________________________
+_______**_______________________________________________________________________
+_______*________________________________________________________________________
+**___**_________________________________________________________________________
+_*****__________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: 
+give me again correct program
+give me which line of code should be corrected
+#include<stdio.h>
+#include<stdlib.h>
+
+#define WIDTH 80
+#define HEIGHT 24
+
+#define EMPTY '_'
+#define PIXEL '*'
+
+
+char picture[HEIGHT][WIDTH];
+void clearPicture()
+{
+    int i,j;
+    for(i=0;i<HEIGHT;i++)
+        {
+            for(j=0;j<WIDTH;j++)
+                {
+                    picture[i][j]=EMPTY;
+
+}
+        }
+}
+void displayPicture()
+{
+    int i,j;
+for(i=0;i<HEIGHT;i++)
+{
+for(j=0;j<WIDTH;j++)
+{
+printf("%c", picture[i][j]);
+}
+printf("\n");
+}
+}
+void setPixel(int x, int y)
+{
+    if(x>=0 && x<WIDTH && y>=0 && y<HEIGHT)
+{
+picture[y][x]=PIXEL;
+}
+}
+void drawLine(int x1,int y1,int x2,int y2)
+{
+int dx=abs(x2-x1);
+int dy=abs(y2-y1);
+int steps=(dx>dy)?dx:dy;
+if(steps==0)
+{
+setPixel(x1,y1);
+return;
+}
+float xInc=(float)(x2-x1)/steps;
+float yInc=(float)(y2-y1)/steps;
+float x=x1;
+float y=y1;
+int i;
+for(int i=0;i<=steps;i++)
+{
+setPixel((int)(x+0.5), (int)(y+0.5));
+x+=xInc;
+y+=yInc;
+}
+}
+void drawRectangle(int x1,int y1,int x2,int y2)
+{
+    drawLine(x1, y1, x2, y1);
+drawLine(x2, y1, x2, y2);
+drawLine(x2, y2, x1, y2);
+drawLine(x1, y2, x1, y1);
+}
+void drawCircle(int cX, int cy, int radius)
+{
+    int x,y;
+for(x=-radius;x<=radius;x++)
+{
+for(y=-radius;y<=radius;y++)
+{
+int d=x*x+y*y;
+int r=radius*radius;
+if(d>=r - radius && d<=r+radius)
+{
+setPixel(cX + x,cy + y);
+}
+}
+}
+}
+void drawTriangle(int x1, int y1, int x2, int y2, int x3, int y3)
+{
+    drawLine(x1, y1, x2, y2);
+drawLine(x2, y2, x3, y3);
+drawLine(x3, y3, x1, y1);
+}
+int main()
+{
+    int choice;
+clearPicture();
+printf("2D Graphics Editor\n");
+printf("Canvas size: %d x %d\n", WIDTH, HEIGHT);
+printf("Use coordinates x y.\n");
+printf("x range: 0 to %d\n", WIDTH - 1);
+while (1) {
+        printf("\nMenu\n");
+        printf("1. Draw Line\n");
+        printf("2. Draw Rectangle\n");
+        printf("3. Draw Circle\n");
+        printf("4. Draw Triangle\n");
+        printf("5. Display Picture\n");
+        printf("0. Exit\n");
+        printf("Enter choice: ");
+
+        scanf("%d", &choice);
+
+        if (choice == 1) {
+            int x1, y1, x2, y2;
+
+            printf("Enter x1 y1 x2 y2: ");
+            scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+
+            drawLine(x1, y1, x2, y2);
+        }
+        else if (choice == 2) {
+            int x1, y1, x2, y2;
+
+            printf("Enter top-left x y and bottom-right x y: ");
+            scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+
+            drawRectangle(x1, y1, x2, y2);
+        }
+        else if (choice == 3) {
+            int cx, cy, radius;
+
+            printf("Enter center x y and radius: ");
+            scanf("%d %d %d", &cx, &cy, &radius);
+
+            drawCircle(cx, cy, radius);
+        }
+        else if (choice == 4) {
+            int x1, y1, x2, y2, x3, y3;
+
+            printf("Enter x1 y1 x2 y2 x3 y3: ");
+            scanf("%d %d %d %d %d %d",
+                  &x1, &y1, &x2, &y2, &x3, &y3);
+
+            drawTriangle(x1, y1, x2, y2, x3, y3);
+        }
+        else if (choice == 5) {
+            printf("The picture is:\n");
+            displayPicture();
+        }
+        else if (choice == 0) {
+            printf("Exiting program.\n");
+            break;
+        }
+        else {
+            printf("Invalid choice.\n");
+        }
+    }
+
+    return 0;
+}
+2D Graphics Editor
+Canvas size: 80 x 24
+Use coordinates x y.
+x range: 0 to 79
+y range: 0 to 23
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: 1
+Enter x1 y1 x2 y2: 1 2 3 4
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: 2
+Enter top-left x y and bottom-right x y: 1 2
+3 6
+
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: 3
+Enter center x y and radius: 4 5 8
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: 4
+Enter x1 y1 x2 y2 x3 y3: 3 4 5 6 1 5
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: 5
+The picture is:
+__________*_____________________________________________________________________
+___________*____________________________________________________________________
+_***_______*____________________________________________________________________
+_***________*___________________________________________________________________
+_*_*________*___________________________________________________________________
+_****_______*___________________________________________________________________
+_*****______*___________________________________________________________________
+____________*___________________________________________________________________
+___________*____________________________________________________________________
+___________*____________________________________________________________________
+__________*_____________________________________________________________________
+_________**_____________________________________________________________________
+**_____**_______________________________________________________________________
+__*****_________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+0. Exit
+Enter choice: 
+to delete and modify objects what should be added give me program
+give correct program
+#include <stdio.h>
+#include <stdlib.h>
+
+#define WIDTH 80
+#define HEIGHT 24
+
+#define EMPTY '_'
+#define PIXEL '*'
+
+char picture[HEIGHT][WIDTH];
+
+void clearPicture() {
+    /*
+        TODO:
+        Fill the entire 2D array picture with EMPTY character '_'.
+    */
+}
+
+void displayPicture() {
+    /*
+        TODO:
+        Print the 2D picture array row by row.
+    */
+}
+
+void setPixel(int x, int y) {
+    /*
+        TODO:
+        If x and y are inside the canvas,
+        set picture[y][x] to PIXEL character '*'.
+    */
+}
+
+void drawLine(int x1, int y1, int x2, int y2) {
+    /*
+        TODO:
+        Draw a line from (x1, y1) to (x2, y2)
+        using the '*' character.
+    */
+}
+
+void drawRectangle(int x1, int y1, int x2, int y2) {
+    /*
+        TODO:
+        Draw a rectangle using four lines.
+        Top-left corner is (x1, y1).
+        Bottom-right corner is (x2, y2).
+    */
+}
+
+void drawCircle(int cx, int cy, int radius) {
+    /*
+        TODO:
+        Draw a circle with center (cx, cy)
+        and given radius using '*'.
+    */
+}
+
+void drawTriangle(int x1, int y1, int x2, int y2, int x3, int y3) {
+    /*
+        TODO:
+        Draw a triangle by joining the three given points.
+    */
+}
+
+int main() {
+    int choice;
+
+    clearPicture();
+
+    printf("2D Graphics Editor\n");
+    printf("Canvas size: %d x %d\n", WIDTH, HEIGHT);
+    printf("Use coordinates x y.\n");
+    printf("x range: 0 to %d\n", WIDTH - 1);
+    printf("y range: 0 to %d\n", HEIGHT - 1);
+
+    while (1) {
+        printf("\nMenu\n");
+        printf("1. Draw Line\n");
+        printf("2. Draw Rectangle\n");
+        printf("3. Draw Circle\n");
+        printf("4. Draw Triangle\n");
+        printf("5. Display Picture\n");
+        printf("0. Exit\n");
+        printf("Enter choice: ");
+
+        scanf("%d", &choice);
+
+        if (choice == 1) {
+            int x1, y1, x2, y2;
+
+            printf("Enter x1 y1 x2 y2: ");
+            scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+
+            drawLine(x1, y1, x2, y2);
+        }
+        else if (choice == 2) {
+            int x1, y1, x2, y2;
+
+            printf("Enter top-left x y and bottom-right x y: ");
+            scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+
+            drawRectangle(x1, y1, x2, y2);
+        }
+        else if (choice == 3) {
+            int cx, cy, radius;
+
+            printf("Enter center x y and radius: ");
+            scanf("%d %d %d", &cx, &cy, &radius);
+
+            drawCircle(cx, cy, radius);
+        }
+        else if (choice == 4) {
+            int x1, y1, x2, y2, x3, y3;
+
+            printf("Enter x1 y1 x2 y2 x3 y3: ");
+            scanf("%d %d %d %d %d %d",
+                  &x1, &y1, &x2, &y2, &x3, &y3);
+
+            drawTriangle(x1, y1, x2, y2, x3, y3);
+        }
+        else if (choice == 5) {
+            printf("The picture is:\n");
+            displayPicture();
+        }
+        else if (choice == 0) {
+            printf("Exiting program.\n");
+            break;
+        }
+        else {
+            printf("Invalid choice.\n");
+        }
+    }
+
+    return 0;
+}
+according to that progarm give  me code to delete and modify shapes
+in which line we should add
+/tmp/qjme9Qgbuy/main.c: In function 'main':
+ERROR!
+/tmp/qjme9Qgbuy/main.c:159:5: error: expected '}' before 'else'
+  159 |     else if (choice == 7) {
+      |     ^~~~
+
+
+=== Code Exited With Errors ===
+2D Graphics Editor
+Canvas size: 80 x 24
+Use coordinates x y.
+x range: 0 to 79
+y range: 0 to 23
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+6. Clear Picture
+7. Modify Picture
+0. Exit
+give output values
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+6. Clear Picture
+7. Modify Picture
+0. Exit
+Enter Choice: 2
+Enter top-left x y and bottom-right x y:10 5 25 10
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+6. Clear Picture
+7. Modify Picture
+0. Exit
+Enter Choice: 5
+The picture is:
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+_____*********************______________________________________________________
+__________*______________*______________________________________________________
+__________*______________*______________________________________________________
+__________*______________*______________________________________________________
+__________*______________*______________________________________________________
+__________****************______________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+give output values for other shapes
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+6. Clear Picture
+7. Modify Picture
+0. Exit
+Enter Choice: 3
+Enter center x y and radius:20 10 5
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+6. Clear Picture
+7. Modify Picture
+0. Exit
+Enter Choice: 5
+The picture is:
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+_____*********************______________________________________________________
+__________*______**___**_*______________________________________________________
+__________*_____*_______**______________________________________________________
+__________*____**_______**______________________________________________________
+__________*____*_________*______________________________________________________
+__________****************______________________________________________________
+_______________*_________*______________________________________________________
+_______________**_______**______________________________________________________
+________________*_______*_______________________________________________________
+_________________**___**________________________________________________________
+__________________*****_________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+give output values for other shapes
+Failed tests
+Test 1: 1
+Test 2: 2
+Test 3: 3
+Test 4: 4
+Test 5: 5
+Test 1: 1
+Program output too large (262Kb)
+Incorrect program output
+--- Input ---
+1
+1
+2 2 20 8
+4
+0
+
+--- Program output ---
+2D Graphics Editor
+Canvas size: 80 x 24
+Use coordinates x y.
+x range: 0 to 79
+y range: 0 to 23
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+6. Clear Picture
+7. Modify Picture
+0. Exit
+Enter Choice: Enter x1 y1 x2 y2:
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+6. Clear Picture
+7. Modify Picture
+0. Exit
+Enter Choice: Invalid choice.
+
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+6. Clear Picture
+7. Modify Picture
+0. Exit
+Enter Choice: Enter x1 y1 x2 y2 x3 y3:y3:
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+6. Clear Picture
+7. Modify Picture
+0. Exit
+Enter Choice: Enter x1 y1 x2 y2 x3 y3:
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+6. Clear Picture
+7. Modify Picture
+0. Exit
+Enter Choice: Enter x1 y1 x2 y2 x3 y3:
+Menu
+1. Draw Line
+2. Draw Rectangle
+3. Draw Circle
+4. Draw Triangle
+5. Display Picture
+6. Clear Picture
+7. Modify Picture
+0. Exit
+Enter Choice: Enter x1 y1 x2 y2 x3 y3:
+#include<stdio.h>
+#include<stdlib.h>
+
+#define WIDTH 80
+#define HEIGHT 24
+
+#define EMPTY '_'
+#define PIXEL '*'
+
+
+char picture[HEIGHT][WIDTH];
+void clearPicture()
+{
+    int i,j;
+    for(i=0;i<HEIGHT;i++)
+        {
+            for(j=0;j<WIDTH;j++)
+                {
+                    picture[i][j]=EMPTY;
+
+}
+        }
+}
+void displayPicture()
+{
+    int i,j;
+for(i=0;i<HEIGHT;i++)
+{
+for(j=0;j<WIDTH;j++)
+{
+printf("%c", picture[i][j]);
+}
+printf("\n");
+}
+}
+void setPixel(int x, int y)
+{
+    if(x>=0 && x<WIDTH && y>=0 && y<HEIGHT)
+{
+picture[y][x]=PIXEL;
+}
+}
+void drawLine(int x1,int y1,int x2,int y2)
+{
+int dx=abs(x2-x1);
+int dy=abs(y2-y1);
+int steps=(dx>dy)?dx:dy;
+if(steps==0)
+{
+setPixel(x1,y1);
+return;
+}
+float xInc=(float)(x2-x1)/steps;
+float yInc=(float)(y2-y1)/steps;
+float x=x1;
+float y=y1;
+int i;
+for(i=0;i<=steps;i++)
+{
+setPixel((int)(x+0.5), (int)(y+0.5));
+x += xInc;
+y += yInc;
+}
+}
+void drawRectangle(int x1,int y1,int x2,int y2)
+{
+    drawLine(x1, y1, x2, y1);
+drawLine(x2, y1, x2, y2);
+drawLine(x2, y2, x1, y2);
+drawLine(x1, y2, x1, y1);
+}
+void drawCircle(int cX, int cy, int radius)
+{
+    int x,y;
+for(x=-radius;x<=radius;x++)
+{
+for(y=-radius;y<=radius;y++)
+{
+int d=x*x+y*y;
+int r=radius*radius;
+if(d>=r - radius && d<=r+radius)
+{
+setPixel(cX + x,cy + y);
+}
+}
+}
+}
+void drawTriangle(int x1, int y1, int x2, int y2, int x3, int y3)
+{
+    drawLine(x1, y1, x2, y2);
+drawLine(x2, y2, x3, y3);
+drawLine(x3, y3, x1, y1);
+}
+int main()
+{
+    int choice;
+clearPicture();
+printf("2D Graphics Editor\n");
+printf("Canvas size: %d x %d\n", WIDTH, HEIGHT);
+printf("Use coordinates x y.\n");
+printf("x range: 0 to %d\n", WIDTH - 1);
+printf("y range: 0 to %d\n", HEIGHT - 1);
+while(1)
+{
+printf("\nMenu\n");
+printf("1. Draw Line\n");
+printf("2. Draw Rectangle\n");
+printf("3. Draw Circle\n");
+printf("4. Draw Triangle\n");
+printf("5. Display Picture\n");
+printf("6. Clear Picture\n");
+printf("7. Modify Picture\n");
+printf("0. Exit\n");
+printf("Enter Choice: ");
+scanf("%d",&choice);
+if(choice==1)
+{
+int x1,y1,x2,y2;
+printf("Enter x1 y1 x2 y2:");
+scanf("%d %d %d %d",&x1,&y1,&x2,&y2);
+drawLine(x1,y1,x2,y2);
+}
+else if(choice==2)
+{
+int x1,y1,x2,y2;
+printf("Enter top-left x y and bottom-right x y:");
+scanf("%d %d %d %d",&x1,&y1,&x2,&y2);
+drawRectangle(x1,y1,x2,y2);
+}
+else if(choice==3)
+{
+int cx,cy,radius;
+printf("Enter center x y and radius:");
+scanf("%d %d %d",&cx,&cy,&radius);
+drawCircle(cx,cy,radius);
+}
+else if(choice==4)
+{
+int x1,y1,x2,y2,x3,y3;
+printf("Enter x1 y1 x2 y2 x3 y3:");
+scanf("%d %d %d %d %d %d",&x1,&y1,&x2,&y2,&x3,&y3);
+drawTriangle(x1,y1,x2,y2,x2,y3);
+}
+else if(choice==5)
+{
+printf("The picture is:\n");
+displayPicture();
+}
+else if(choice==6)
+{
+clearPicture();
+printf("Picture cleared.\n");
+}
+else if(choice==7)
+{
+int x1,y1,x2,y2;
+clearPicture();
+printf("Enter new line coordinates x1 y1 x2 y2: ");
+scanf("%d %d %d %d",&x1,&y1,&x2,&y2);
+drawLine(x1,y1,x2,y2);
+printf("Picture modified.\n");
+}
+else if(choice==0)
+{
+printf("Exiting program.\n");
+break;
+}
+else
+{
+printf("Invalid choice.\n");
+}
+}
+return 0;
+}
+
